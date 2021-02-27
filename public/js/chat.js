@@ -65,8 +65,8 @@ socket.on("locationMessage", (message) => {
   autoscroll();
 });
 
-socket.on('roomData', ({aroom, users}) => {
-  const  html = Mustache.render($sidebarTemplate, {aroom, users})
+socket.on('roomData', ({room, users}) => {
+  const  html = Mustache.render($sidebarTemplate, {room, users})
   $sidebar.innerHTML = html;
 })
 
